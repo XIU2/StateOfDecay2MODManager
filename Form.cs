@@ -88,11 +88,11 @@ namespace 腐烂国度2_MOD管理小工具
                 {
                     MessageBox.Show("解压 MOD 压缩包失败！请尝试重新打包压缩包为 .zip 格式！", "错误：", MessageBoxButtons.OK);
                 }
-                pictureBox_loading.Visible = false; // 显示加载中GIF
+                pictureBox_loading.Visible = false; // 隐藏加载中GIF
             }
         }
-        // 解压缩 MOD 压缩包文件
-        private bool Unzip(string PATH_Zip, string PATH_Temp_Mods)
+        
+        private bool Unzip(string PATH_Zip, string PATH_Temp_Mods) // 解压缩 MOD 压缩包文件
         {
             //Debug.Print(DateTime.Now.ToString("mm-ss-ffff"));
             //Debug.Print(Path.GetExtension(PATH_Zip));
@@ -155,8 +155,8 @@ namespace 腐烂国度2_MOD管理小工具
             return true;
             //Debug.Print(DateTime.Now.ToString("mm-ss-ffff"));
         }
-        // 生成文件索引
-        private void File_Index(string PATH)
+        
+        private void File_Index(string PATH) // 生成文件索引
         {
             File_Index_List.Clear();
             if (File.Exists(PATH + @"\Index.txt"))
@@ -192,8 +192,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             return File_Index_List;
         }
-        // 检查是否有 Content 文件夹
-        private void Check_Content(string PATH)
+        
+        private void Check_Content(string PATH) // 检查是否有 Content 文件夹
         {
             DirectoryInfo Dir_Content = new DirectoryInfo(PATH);
             DirectoryInfo[] Dir_Content_2 = Dir_Content.GetDirectories();
@@ -215,8 +215,8 @@ namespace 腐烂国度2_MOD管理小工具
                 }
             }
         }
-        // 移动 MOD 文件到 Mods 文件夹
-        private string Move_Mods(string Old_PATH,string New_PATH)
+        
+        private string Move_Mods(string Old_PATH,string New_PATH) // 移动 MOD 文件到 Mods 文件夹
         {
             string New_PATH_2 = "";
             if (Directory.Exists(New_PATH))
@@ -226,8 +226,8 @@ namespace 腐烂国度2_MOD管理小工具
             Directory.Move(Old_PATH + @"\", New_PATH + New_PATH_2 + @"\");
             return New_PATH_2;
         }
-        // 载入 XML 配置文件
-        private void ReadXML()
+        
+        private void ReadXML() // 载入 XML 配置文件
         {
             string XML_Status;
             int XML_InstallNum = 0;
@@ -284,8 +284,8 @@ namespace 腐烂国度2_MOD管理小工具
                 Directory.CreateDirectory(PATH_Unzip_TEMP);
             }
         }
-        // 写出 XML 配置文件
-        private void WriteXML()
+        
+        private void WriteXML() // 写出 XML 配置文件
         {
             bool XML_Status;
             XDocument XML_xDoc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"));
@@ -321,8 +321,8 @@ namespace 腐烂国度2_MOD管理小工具
             //保存xml文件
             XML_xDoc.Save(PATH_XML);
         }
-        // 删除 MOD
-        private void Delete_Mods(int Index)
+        
+        private void Delete_Mods(int Index) // 删除 MOD
         {
             if (Directory.Exists(PATH_Mods + listView_MOD列表.Items[Index].SubItems[0].Text))
             {
@@ -333,8 +333,8 @@ namespace 腐烂国度2_MOD管理小工具
             listView_MOD列表.EndUpdate();  //结束数据处理，UI界面一次性绘制
             StatusLabel_已载入数量.Text = "   已载入 MOD：" + listView_MOD列表.Items.Count.ToString() + " 个";
         }
-        // 看看与哪个MOD冲突
-        private List<string> Conflict_Checking(List<string> Index_Conflict_1)
+        
+        private List<string> Conflict_Checking(List<string> Index_Conflict_1) // 看看与哪个MOD冲突
         {
             List<string> Index_Conflict_3 = Index_Conflict_1;
             List<string> Index_Conflict_2 = new List<string>();
@@ -379,8 +379,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             return Index_Conflict_2;
         }
-        // 安装 MOD
-        private bool Install_Mods(string NAME)
+        
+        private bool Install_Mods(string NAME) // 安装 MOD
         {
             if (Get_Game_Status() == false)
             {
@@ -467,8 +467,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             return true;
         }
-        // 卸载 MOD
-        private bool Uninstall_Mods(string NAME)
+        
+        private bool Uninstall_Mods(string NAME) // 卸载 MOD
         {
             if (Get_Game_Status() == false)
             {
@@ -515,8 +515,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             return true;
         }
-        // 重命名 MOD
-        private void Rename_Mods(string Old_Name,string New_Name)
+        
+        private void Rename_Mods(string Old_Name,string New_Name) // 重命名 MOD
         {
             if (!Directory.Exists(PATH_Mods + New_Name))
             {
@@ -536,8 +536,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             
         }
-        // 获取并更新已安装数量（状态栏）
-        private void GetInstallNum()
+        
+        private void GetInstallNum() // 获取并更新已安装数量（状态栏）
         {
             int InstallNum = 0;
             for (int GetInstallNum_Index = 0; GetInstallNum_Index < listView_MOD列表.Items.Count; GetInstallNum_Index++)
@@ -549,8 +549,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             StatusLabel_已安装数量.Text = "，已安装 MOD：" + InstallNum.ToString() + " 个";
         }
-        // 弹出MOD列表 右键菜单
-        private void ListView_MOD列表_MouseClick(object sender, MouseEventArgs e)
+        
+        private void ListView_MOD列表_MouseClick(object sender, MouseEventArgs e) // 弹出MOD列表 右键菜单
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -569,8 +569,8 @@ namespace 腐烂国度2_MOD管理小工具
                 }
             }
         }
-        // 右键菜单 安装卸载
-        private void Menu_安装卸载_Click(object sender, EventArgs e)
+        
+        private void Menu_安装卸载_Click(object sender, EventArgs e) // 右键菜单 安装卸载
         {
             if (Menu_安装卸载.Text == "安装")
             {
@@ -595,8 +595,8 @@ namespace 腐烂国度2_MOD管理小工具
                 }
             }
         }
-        // 右键菜单 删除
-        private void Menu_删除_Click(object sender, EventArgs e)
+        
+        private void Menu_删除_Click(object sender, EventArgs e) // 右键菜单 删除
         {
             if (listView_MOD列表.Items[listView_MOD列表.FocusedItem.Index].SubItems[1].Text == "未安装")
             {
@@ -612,27 +612,27 @@ namespace 腐烂国度2_MOD管理小工具
                 MessageBox.Show("该 MOD 已安装，请先卸载！", "提示：", MessageBoxButtons.OK);
             }
         }
-        // 右键菜单 查看
-        private void Menu_查看_Click(object sender, EventArgs e)
+        
+        private void Menu_查看_Click(object sender, EventArgs e) // 右键菜单 查看
         {
             Process.Start('"' + PATH_Mods + listView_MOD列表.Items[listView_MOD列表.FocusedItem.Index].SubItems[0].Text + '"');
         }
-        // 右键菜单 重命名
-        private void Menu_重命名_Click(object sender, EventArgs e)
+        
+        private void Menu_重命名_Click(object sender, EventArgs e) // 右键菜单 重命名
         {
             listView_MOD列表.SelectedItems[0].BeginEdit();
         }
         string listview_Rename_Old_Name;
         int listview_Rename_Old_Index;
-        // 重命名 MOD 前
-        private void ListView_MOD列表_BeforeLabelEdit(object sender, LabelEditEventArgs e)
+        
+        private void ListView_MOD列表_BeforeLabelEdit(object sender, LabelEditEventArgs e) // 重命名 MOD 前
         {
             listview_Rename_Old_Index = listView_MOD列表.FocusedItem.Index;
             listview_Rename_Old_Name = listView_MOD列表.Items[listview_Rename_Old_Index].SubItems[0].Text;
             //Debug.Print(listview_Rename_Old_Name);
         }
-        // 重命名 MOD 后
-        private void ListView_MOD列表_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        
+        private void ListView_MOD列表_AfterLabelEdit(object sender, LabelEditEventArgs e) // 重命名 MOD 后
         {
             //Debug.Print(e.Label + "  " + listview_Rename_Old_Name);
             if (e.Label != "")
@@ -645,8 +645,8 @@ namespace 腐烂国度2_MOD管理小工具
             }
             //listView_MOD列表.SelectedItems[listview_Rename_Old_Index].BeginEdit()
         }
-        // 浏览MOD安装位置
-        private void Button_浏览MOD安装位置_Click(object sender, EventArgs e)
+        
+        private void Button_浏览MOD安装位置_Click(object sender, EventArgs e) // 浏览MOD安装位置
         {
             string LocalApplicationData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
             string Content_PATH = LocalApplicationData + @"\StateOfDecay2\Saved";
@@ -666,8 +666,8 @@ namespace 腐烂国度2_MOD管理小工具
                 textBox_MOD安装位置.Text = folderBrowserDialog1.SelectedPath;
             }
         }
-        // 获取游戏运行状态
-        private bool Get_Game_Status()
+        
+        private bool Get_Game_Status() // 获取游戏运行状态
         {
             if (Process.GetProcessesByName("StateOfDecay2-Win64-Shipping").Length > 0)
             {
@@ -675,13 +675,13 @@ namespace 腐烂国度2_MOD管理小工具
             }
             return false;
         }
-        // 手动检查更新
-        private void StatusLabel_检查更新_Click(object sender, EventArgs e)
+        
+        private void StatusLabel_检查更新_Click(object sender, EventArgs e) // 手动检查更新
         {
             Task.Run(() => Check_Updates(true));
         }
-        // 检查更新
-        private void Check_Updates(bool Tipprompt)
+        
+        private void Check_Updates(bool Tipprompt) // 检查更新
         {
             string strHTML = Get_HTTP("https://api.xiuer.pw/ver/flgd2modglxgj.txt");
             string[] Ver_Info = strHTML.Split('\n');
