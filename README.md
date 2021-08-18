@@ -1,9 +1,9 @@
 # XIU2/StateOfDecay2MODManager
 
-[![Release Version](https://img.shields.io/github/v/release/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=Release&color=1784ff)](https://github.com/XIU2/StateOfDecay2MODManager/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=License&color=ca6b2b)](https://github.com/XIU2/StateOfDecay2MODManager/blob/master/LICENSE)
-[![GitHub Star](https://img.shields.io/github/stars/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=Star&color=ca6b2b)](https://github.com/XIU2/StateOfDecay2MODManager/stargazers)
-[![GitHub Fork](https://img.shields.io/github/forks/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=Fork&color=ca6b2b)](https://github.com/XIU2/StateOfDecay2MODManager/network/members)
+[![Release Version](https://img.shields.io/github/v/release/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=Release&color=1784ff&logo=github)](https://github.com/XIU2/StateOfDecay2MODManager/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=License&color=ca6b2b&logo=github)](https://github.com/XIU2/StateOfDecay2MODManager/)
+[![GitHub Star](https://img.shields.io/github/stars/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=Star&color=ca6b2b&logo=github)](https://github.com/XIU2/StateOfDecay2MODManager/)
+[![GitHub Fork](https://img.shields.io/github/forks/XIU2/StateOfDecay2MODManager.svg?style=flat-square&label=Fork&color=ca6b2b&logo=github)](https://github.com/XIU2/StateOfDecay2MODManager/)
 
 **腐烂国度2：主宰版 MOD 管理器**
 
