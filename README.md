@@ -8,6 +8,7 @@
 **腐烂国度2：主宰版 MOD 管理器**
 
 有效解决《腐烂国度2：主宰版》MOD 混在一起难以管理、卸载的痛点！  
+不过因为我现在不玩这游戏了，所以基本上是停更了。。。
 
 ****
 
@@ -19,7 +20,7 @@
 
 ## 下载地址
 
-* 蓝奏云 ：[https://pan.lanzoui.com/b073munlc](https://pan.lanzoui.com/b073munlc)
+* 蓝奏云 ：[https://pan.lanzouq.com/b073munlc](https://pan.lanzouq.com/b073munlc)
 * Github：[https://github.com/XIU2/StateOfDecay2MODManager/releases](https://github.com/XIU2/StateOfDecay2MODManager/releases)
 
 ****
@@ -66,7 +67,7 @@
 
 ## 赞赏支持
 
-![微信赞赏](https://cdn.dogimg.com/pic/2022/03/28/6241159b1f315.png)![支付宝赞赏](https://cdn.dogimg.com/pic/2022/03/28/6241159b19b2c.png)
+![微信赞赏](https://cdn.staticaly.com/gh/XIU2/XIU2/master/img/zs-01.png)![支付宝赞赏](https://cdn.staticaly.com/gh/XIU2/XIU2/master/img/zs-02.png)
 
 ****
 
