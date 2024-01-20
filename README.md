@@ -20,7 +20,7 @@
 
 ## 下载地址
 
-* 蓝奏云 ：[https://pan.lanzouq.com/b073munlc](https://pan.lanzouq.com/b073munlc)
+* 蓝奏云 ：[https://pan.lanpw.com/b073munlc](https://pan.lanpw.com/b073munlc)
 * Github：[https://github.com/XIU2/StateOfDecay2MODManager/releases](https://github.com/XIU2/StateOfDecay2MODManager/releases)
 
 ****
